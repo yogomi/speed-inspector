@@ -7,7 +7,7 @@
 #include <string>
 #include <chrono>
 
-struct TimeInspector {
+struct SpeedInspector {
  public:
   static void setCurrentTime() {
     t_ = std::chrono::system_clock::now();
@@ -22,7 +22,7 @@ struct TimeInspector {
   static std::chrono::system_clock::time_point t_;
 };
 
-std::chrono::system_clock::time_point TimeInspector::t_
+std::chrono::system_clock::time_point SpeedInspector::t_
                                           = std::chrono::system_clock::now();
 
 #endif  // SPEED_INSPECTOR_H_
